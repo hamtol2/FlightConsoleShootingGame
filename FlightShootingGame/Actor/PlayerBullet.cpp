@@ -22,7 +22,8 @@ void PlayerBullet::Update(float deltaTime)
 	position.y = (int)yPosition;
 
 	// y좌표가 화면을 벗어나면 액터 삭제.
-	if (position.y < 0)
+	//if (position.y < 0)
+	if (yPosition < 0.0f)
 	{
 		Destroy();
 		return;
