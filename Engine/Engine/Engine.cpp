@@ -56,6 +56,9 @@ Engine::~Engine()
 	{
 		delete mainLevel;
 	}
+
+	// 클리어 버퍼 삭제.
+	delete[] emptyStringBuffer;
 }
 
 void Engine::Run()

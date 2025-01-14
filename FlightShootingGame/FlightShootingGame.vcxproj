@@ -168,12 +168,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Player.cpp" />
+    <ClCompile Include="Actor\PlayerBullet.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Level\TestLevel.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Player.h" />
+    <ClInclude Include="Actor\PlayerBullet.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Level\TestLevel.h" />
   </ItemGroup>
