@@ -45,6 +45,9 @@ public:
 	void SetCursorPosition(const Vector2& position);
 	void SetCursorPosition(int x, int y);
 
+	// 화면 크기 반환 함수.
+	inline Vector2 ScreenSize() const { return screenSize; }
+
 	// 타겟 프레임 속도 설정 함수.
 	void SetTargetFrameRate(float targetFrameRate);
 
@@ -91,4 +94,10 @@ protected:
 
 	// 프레임을 업데이트해야 하는지 여부를 나타내는 변수.
 	bool shouldUpdate = true;
+
+	// 화면 크기.
+	Vector2 screenSize;
+
+	// 화면 지울 때 사용할 버퍼(Buffer/Blob).
+	char* emptyStringBuffer = nullptr;
 };
