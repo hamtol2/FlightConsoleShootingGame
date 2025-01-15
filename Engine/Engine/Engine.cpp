@@ -34,12 +34,6 @@ Engine::Engine()
 	// 2. 값 할당.
 	for (int y = 0; y < screenSize.y; ++y)
 	{
-		//for (int x = 0; x < screenSize.x; ++x)
-		//{
-		//	// 인덱스 계산 잘하기.
-		//	emptyStringBuffer[(y * (screenSize.x + 1)) + x] = ' ';
-		//}
-
 		// 각 줄 끝에 개행 문자 추가.
 		emptyStringBuffer[(y * (screenSize.x + 1)) + screenSize.x] = '\n';
 	}
