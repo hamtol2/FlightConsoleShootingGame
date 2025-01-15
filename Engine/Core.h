@@ -16,6 +16,15 @@ enum class Color : unsigned short
 	White = Red + Green + Blue,
 };
 
+// 콘솔 색상 설정 함수.
+inline void SetColor(Color color)
+{
+	SetConsoleTextAttribute(
+		GetStdHandle(STD_OUTPUT_HANDLE), 
+		(int)color
+	);
+}
+
 // 메모리 삭제 함수.
 template<typename T>
 void SafeDelete(T* pointer)

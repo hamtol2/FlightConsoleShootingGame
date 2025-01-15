@@ -7,7 +7,8 @@ Player::Player(const char* image)
 	: Super(image)
 {
 	// 플레이어 시작 위치.
-	position = Vector2(0, 20);
+	//position = Vector2(0, 20);
+	position = Vector2(0, Engine::Get().ScreenSize().y - 1);
 }
 
 void Player::Update(float deltaTime)
