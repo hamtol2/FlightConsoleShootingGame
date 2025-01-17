@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Level/Level.h"
+#include "Math/Vector2.h"
 
 class TestLevel : public Level
 {
@@ -12,6 +13,7 @@ public:
 	~TestLevel();
 
 	virtual void Update(float deltaTime) override;
+	virtual void Draw() override;
 
 private:
 	// 적 생성 함수.
@@ -26,4 +28,7 @@ private:
 private:
 	// 점수.
 	int score = 0;
+
+	bool isPlayerDead = false;
+	Vector2 playerDeadPosition;
 };

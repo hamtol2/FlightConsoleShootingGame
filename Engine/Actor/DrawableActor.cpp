@@ -23,12 +23,20 @@ void DrawableActor::Draw()
 {
 	Super::Draw();
 
+	// 색상 설정.
+	//Engine::Get().SetColor(color);
+
 	// 그리기.
 	// 1단계: 콘솔 좌표 옮기기.
-	Engine::Get().SetCursorPosition(position);
+	//Engine::Get().SetCursorPosition(position);
 
 	// 2단계: 그리기 (콘솔 출력).
-	Log(image);
+	//Log(image);
+
+	Engine::Get().Draw(position, image, color);
+
+	// 색상 복구.
+	//Engine::Get().SetColor(Color::White);
 }
 
 void DrawableActor::SetPosition(const Vector2& newPosition)

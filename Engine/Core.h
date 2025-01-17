@@ -16,14 +16,22 @@ enum class Color : unsigned short
 	White = Red + Green + Blue,
 };
 
-// 콘솔 색상 설정 함수.
-inline void SetColor(Color color)
+// 커서의 종류를 설정할 때 사용할 열거형.
+enum class CursorType
 {
-	SetConsoleTextAttribute(
-		GetStdHandle(STD_OUTPUT_HANDLE), 
-		(int)color
-	);
-}
+	NoCursor,
+	SolidCursor,
+	NormalCursor
+};
+
+// 콘솔 색상 설정 함수.
+//inline void SetColor(Color color)
+//{
+//	SetConsoleTextAttribute(
+//		GetStdHandle(STD_OUTPUT_HANDLE), 
+//		(int)color
+//	);
+//}
 
 // 메모리 삭제 함수.
 template<typename T>
